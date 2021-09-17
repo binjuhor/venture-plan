@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_services",
+  "info": {
+    "name": "Our Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

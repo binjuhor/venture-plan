@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insight_categories",
+  "info": {
+    "name": "Insight Categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Industries",
+        "Services"
+      ],
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,77 @@
+body {
+	&.shown-filter {
+		.filter {
+			transform: translateX(0);
+		}
+	}
+}
+
+.filter {
+	position: fixed;
+	top: 20%;
+	z-index: 90;
+	left: 0;
+	background: rgba(255, 255, 255, 0.92);
+	width: 286px;
+	padding: 25px 12px 30px 70px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.36);
+	transition: all 0.3s;
+	transform: translateX(-350px);
+
+	@include breakpoint(1440px) {
+		width: 290px;
+		padding: 45px 17px 45px 70px;
+	}
+
+	&__inner {
+		position: relative;
+	}
+
+	&__logo {
+		max-width: 73px;
+		display: block;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 4px;
+		line-height: 1;
+
+		svg {
+			display: block;
+		}
+	}
+
+	&__content {
+		margin-top: 78px;
+		max-height: 50vh;
+		overflow-y: auto;
+
+		@include breakpoint(1440px) {
+			margin-top: 63px;
+		}
+
+		h3 {
+			font-size: 17px;
+			line-height: 20px;
+			font-weight: 600;
+			margin: 0 0 35px;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+
+		h4 {
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: 600;
+			margin: 0 0 48px;
+			text-decoration: underline;
+		}
+
+		.checkbox-list {
+			margin-bottom: 87px;
+		}
+	}
+}

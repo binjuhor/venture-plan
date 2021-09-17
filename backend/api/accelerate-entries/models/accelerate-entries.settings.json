@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accelerate_entries",
+  "info": {
+    "name": "Accelerate Entries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FullName": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "QuestionOptionEntry": {
+      "type": "component",
+      "repeatable": true,
+      "component": "question-option-entry.question-option-entry"
+    }
+  }
+}

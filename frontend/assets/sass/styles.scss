@@ -1,0 +1,33 @@
+@import "common/variable";
+/**  Mixins */
+@import "mixins/sass-rem";
+@import "mixins/break-point";
+
+/** Global **/
+@import "common/fonts";
+@import "common/reboot";
+@import "common/base";
+@import "common/global";
+@import "common/header";
+@import "common/footer";
+@import "common/custom";
+
+/** libraries */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+// @import '~swiper/components/pagination/pagination.scss';
+@import "~swiper/swiper-bundle.css";
+
+/** pages */
+@import "pages/home";
+@import "pages/grants";
+@import "pages/contact";
+@import "pages/insights";
+@import "pages/about";
+@import "pages/business";
+@import "pages/search";
+@import "pages/404";
+
+/** Section */
+@import "sections/section";
+

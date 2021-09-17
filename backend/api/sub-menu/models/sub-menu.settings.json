@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_items",
+  "info": {
+    "name": "Menu Item",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "sub_items": {
+      "collection": "sub-menu"
+    },
+    "Rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.row"
+    }
+  }
+}

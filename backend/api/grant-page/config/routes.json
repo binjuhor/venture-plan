@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/grant-page",
+      "handler": "grant-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/grant-page",
+      "handler": "grant-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/grant-page",
+      "handler": "grant-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "search_entries",
+  "info": {
+    "name": "Search Entries"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Keyword": {
+      "type": "string",
+      "required": true
+    },
+    "Count": {
+      "type": "biginteger",
+      "required": true,
+      "default": "1",
+      "min": "1",
+      "unique": true
+    }
+  }
+}

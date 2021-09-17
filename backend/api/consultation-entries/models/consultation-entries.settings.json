@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultation_entries",
+  "info": {
+    "name": "Consultation Entries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Subscribe": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Test": {
+      "type": "string"
+    }
+  }
+}

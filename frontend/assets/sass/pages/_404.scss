@@ -1,0 +1,10 @@
+.page404 {
+    padding-block: 40px;
+
+    @include breakpoint(tablet) {
+        padding-block: 80px;
+    }
+    p {
+        max-width: 500px;
+    }
+}

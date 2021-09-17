@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/insights-page",
+      "handler": "insights-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/insights-page",
+      "handler": "insights-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/insights-page",
+      "handler": "insights-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

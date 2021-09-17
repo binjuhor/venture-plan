@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "CompanyOverview": {
+      "type": "text",
+      "required": true
+    },
+    "Sliders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sliders.sliders",
+      "required": true
+    }
+  }
+}

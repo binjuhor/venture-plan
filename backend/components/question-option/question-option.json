@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_question_option_question_options",
+  "info": {
+    "name": "Question Option",
+    "icon": "air-freshener",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string",
+      "required": true
+    },
+    "Option": {
+      "type": "component",
+      "repeatable": true,
+      "component": "option.option",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

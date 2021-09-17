@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_talk_to_expert_services_tte_services",
+  "info": {
+    "name": "TTEServices",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

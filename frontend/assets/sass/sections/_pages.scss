@@ -1,0 +1,7 @@
+.page-content {
+    padding-block: 20px;
+
+    @include breakpoint(tablet) {
+        padding-block: 40px;
+    }
+}

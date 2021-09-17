@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/trust-certificates",
+      "handler": "trust-certificates.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/trust-certificates/count",
+      "handler": "trust-certificates.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/trust-certificates/:id",
+      "handler": "trust-certificates.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/trust-certificates",
+      "handler": "trust-certificates.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/trust-certificates/:id",
+      "handler": "trust-certificates.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/trust-certificates/:id",
+      "handler": "trust-certificates.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

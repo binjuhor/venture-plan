@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_country_region_country_regions",
+  "info": {
+    "name": "Country / Region",
+    "icon": "location-arrow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

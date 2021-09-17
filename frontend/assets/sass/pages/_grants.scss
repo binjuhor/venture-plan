@@ -1,0 +1,85 @@
+.grants-page {
+	background: #FBFBFD;
+
+	.question-list {
+		&.question_1 {
+			.question-list__right {
+				@include breakpoint(1700px) {
+					padding-top: 40px;
+				}
+			}
+		}
+	}
+
+	.overview {
+		padding-top: 60px;
+
+		@include breakpoint(1024px) {
+			padding-top: 80px;
+			padding-bottom: 10px;
+		}
+
+		@include breakpoint(1440px) {
+			padding-top: 100px;
+			padding-bottom: 30px;
+		}
+
+		@include breakpoint(1700px) {
+			padding-top: 120px;
+			padding-bottom: 60px;
+		}
+
+		.section__title {
+			@include breakpoint-down(767px) {
+				max-width: 210px;
+				margin: 0 auto;
+			}
+
+			h3 {
+				@include breakpoint-down(767px) {
+					margin: 0 0 40px;
+				}
+			}
+		}
+
+		&__detail {
+			.readmore-p {
+				@include breakpoint-down(767px) {
+					height: 45px;
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.video {
+		@include breakpoint(1024px) {
+			padding-top: 0;
+		}
+	}
+
+	.consultation {
+		@include breakpoint-down(767px) {
+			padding-top: 30px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 40px 0 70px;
+		}
+	}
+
+	.brand {
+		@include breakpoint-down(767px) {
+			background: $white;
+		}
+	}
+
+	.scroll-menu__inner {
+		@include breakpoint(tablet) {
+			padding: 0 0 0 60px;
+		}
+	}
+}

@@ -1,0 +1,150 @@
+.scroll-menu {
+  background: var(--white);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+
+  @include breakpoint(tablet) {
+    border-bottom: 2px solid #cfcfcf;
+  }
+
+  .container {
+    @include breakpoint-down(767px) {
+      padding: 0;
+      padding-right: 30px;
+    }
+
+    .refPosition {
+      position: relative;
+      top: calc( -100vh + 350px);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    max-width: 100%;
+    padding: 0 0 0 30px;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+
+    @include breakpoint-down(1224px) {
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @extend %reset-list;
+    display: flex;
+
+    li {
+      a {
+        font-size: 13px;
+        font-weight: 500;
+        display: block;
+        padding: 22px 0;
+        color: #353535;
+        position: relative;
+
+        @include breakpoint(tablet) {
+          font-size: 11px;
+          line-height: 12px;
+          padding: 14px 0;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 18px 0;
+        }
+
+        @include breakpoint(1700px) {
+          font-size: 16px;
+          padding: 21px 0;
+          line-height: 18px;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          border-bottom: 3px solid $primary;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          transition: all 0.3s;
+
+          @include breakpoint(1700px) {
+            bottom: -2px;
+          }
+        }
+
+        &:hover {
+          // text-shadow: 0 0 1px #353535;
+          color:#00a1f1;
+        }
+      }
+
+      + li {
+        margin-left: 13px;
+
+        @include breakpoint(tablet) {
+          margin-left: 24px;
+        }
+
+        @include breakpoint(1440px) {
+        }
+
+        @include breakpoint(1700px) {
+          margin-left: 40px;
+        }
+      }
+
+      &.active,
+      &:active,
+      &:hover {
+        > a {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__share {
+    display: none;
+    align-items: center;
+    position: relative;
+    padding: 0 0 0 30px;
+
+    @include breakpoint(tablet) {
+      padding: 0 60px;
+      display: flex;
+    }
+
+    .share-group {
+      height: 100%;
+      align-items: center;
+      display: flex;
+      padding-right: 20px;
+
+      ul {
+        display: none;
+      }
+
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}

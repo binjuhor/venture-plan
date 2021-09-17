@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/accelerates",
+      "handler": "accelerates.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accelerates/count",
+      "handler": "accelerates.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accelerates/:id",
+      "handler": "accelerates.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/accelerates",
+      "handler": "accelerates.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/accelerates/:id",
+      "handler": "accelerates.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/accelerates/:id",
+      "handler": "accelerates.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_question_option_entry_question_option_entries",
+  "info": {
+    "name": "Question Option Entry",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Option": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_forms",
+  "info": {
+    "name": "Contact Form",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CountryRegion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "country-region.country-region",
+      "required": true
+    },
+    "InquiryReason": {
+      "type": "component",
+      "repeatable": true,
+      "component": "inquiry-reason.inquiry-reasons",
+      "required": true
+    },
+    "TalkToExpert": {
+      "type": "component",
+      "repeatable": false,
+      "component": "talk-to-expert.talk-to-expert",
+      "required": true
+    },
+    "BusinessServices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business-services.business-services",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "package_entries",
+  "info": {
+    "name": "Package Entries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FullName": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "package": {
+      "model": "packages"
+    },
+    "Price": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

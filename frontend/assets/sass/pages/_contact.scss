@@ -1,0 +1,57 @@
+.contact-page {
+	.video__content {
+		font-weight: 400;
+
+		@include breakpoint(1440px) {
+			line-height: 36px;
+		}
+
+		p {
+			@include breakpoint(tablet) {
+				margin-bottom: 50px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.consultation {
+		padding-top: 30px;
+
+		@include breakpoint(tablet) {
+			padding-top: 40px;
+		}
+
+		@include breakpoint(1440px) {
+			padding-top: 50px;
+		}
+
+		@include breakpoint(1700px) {
+			padding-top: 60px;
+		}
+	}
+
+	.search-group {
+		&__list {
+			@include breakpoint(1700px) {
+				max-height: 774px;
+			}
+		}
+	}
+
+	.video {
+		@include breakpoint(tablet) {
+			padding-bottom: 80px;
+		}
+
+		@include breakpoint(1440px) {
+			padding-bottom: 114px;
+		}
+
+		@include breakpoint(1700px) {
+			padding-bottom: 120px;
+		}
+	}
+}

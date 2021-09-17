@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_business_services_business_services",
+  "info": {
+    "name": "Business Services",
+    "icon": "angle-double-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sectors",
+  "info": {
+    "name": "Sectors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "IndustryConsultations": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "BusinessPlansWritten": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "YearsExperience": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "Raised": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    }
+  }
+}

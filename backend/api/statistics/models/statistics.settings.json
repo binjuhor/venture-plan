@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statistics",
+  "info": {
+    "name": "Statistics",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "StatisticContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "statistic-content.statistic-content",
+      "required": true
+    }
+  }
+}

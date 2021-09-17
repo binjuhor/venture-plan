@@ -1,0 +1,26 @@
+.environment {
+  @extend %section-padding;
+
+  .section__heading {
+    p {
+      @include breakpoint-down(767px) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__inner {
+    @include breakpoint(tablet) {
+      max-width: 624px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(tablet) {
+      max-width: 828px;
+    }
+
+    @include breakpoint(1700px) {
+      max-width: 100%;
+    }
+  }
+}

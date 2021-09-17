@@ -1,0 +1,467 @@
+.popup-shown {
+  .popup {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../images/popup/popup-image.png") no-repeat -25px calc(
+      100% + 13px
+    ) / 58% rgba(255, 255, 255, 0.95);
+  z-index: 1009;
+  top: 0;
+  left: 0;
+  padding: 62px 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    align-items: center;
+    background-position: -105px 100%;
+    background-size: 46%;
+  }
+
+  @include breakpoint(1440px) {
+    background-position: -17px 100%;
+    background-size: 39%;
+  }
+
+  @include breakpoint(1700px) {
+    background-position: -90px calc(100% + 48px);
+    background-size: 41%;
+  }
+
+  &__container {
+    @extend %container;
+
+    @include breakpoint(1700px) {
+      max-width: 1600px;
+    }
+  }
+
+  &__inner {
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+  }
+
+  &__left {
+    padding-top: 76px;
+
+    @include breakpoint(tablet) {
+      width: 50%;
+      order: -1;
+      padding-top: 47px;
+      padding-right: 33px;
+    }
+
+    @include breakpoint(1440px) {
+      padding-top: 120px;
+      padding-right: 79px;
+    }
+
+    @include breakpoint(1700px) {
+      padding-top: 167px;
+      padding-right: 109px;
+    }
+  }
+
+  &__right {
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 27px;
+      color: $primary;
+      font-weight: 800;
+      margin: 0 0 18px;
+
+      @include breakpoint(tablet) {
+        font-size: 23px;
+        line-height: 26px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 32px;
+        line-height: 36px;
+        margin: 0 0 24px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 50px;
+        line-height: 57px;
+        margin: 0 0 35px;
+      }
+    }
+
+    h3 {
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 600;
+      color: #09090a;
+      margin: 0 0 24px;
+      text-transform: uppercase;
+      max-width: 300px;
+
+      @include breakpoint(tablet) {
+        font-size: 37px;
+        line-height: 44px;
+        margin: 0 0 20px;
+        max-width: 270px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 50px;
+        line-height: 59px;
+        margin: 0 0 26px;
+        max-width: 380px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 73px;
+        line-height: 82px;
+        margin: 0 0 29px;
+        max-width: 530px;
+      }
+    }
+
+    h5 {
+      font-size: 20px;
+      line-height: 22px;
+      color: #b5b5b5;
+      margin: 0 0 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      @include breakpoint(1440px) {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0 0 56px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 40px;
+        line-height: 45px;
+        margin: 0 0 46px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 24px;
+      margin: 0 0 21px;
+
+      @include breakpoint(tablet) {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 18px;
+      }
+
+      @include breakpoint(1440px) {
+        margin: 0 0 48px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 61px;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 25px;
+
+      @include breakpoint(1440px) {
+        margin: 0 0 33px;
+      }
+
+      @include breakpoint(1700px) {
+        margin: 0 0 45px;
+      }
+
+      input {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+        width: calc(100% - 113px);
+        padding: 14px 12px;
+        background: var(--white);
+        border-radius: 10px;
+        border-color: var(--primary);
+
+        @include breakpoint(tablet) {
+          width: calc(100% - 148px);
+          font-size: 16px;
+          line-height: 18px;
+          border-radius: 12px;
+        }
+
+        @include breakpoint(1440px) {
+          width: calc(100% - 204px);
+          font-size: 20px;
+          line-height: 22px;
+          padding: 20px;
+        }
+
+        @include breakpoint(1700px) {
+          width: calc(100% - 276px);
+          padding: 33px 27px;
+        }
+      }
+
+      button {
+        font-size: 14px;
+        line-height: 17px;
+        width: 105px;
+        min-width: auto;
+        font-weight: 600;
+        padding: 14px;
+        min-height: auto;
+        border-radius: 10px;
+        text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+          width: 144px;
+          font-size: 10px;
+          line-height: 11px;
+          border-radius: 12px;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 14px;
+          line-height: 16px;
+          width: 194px;
+          padding: 24px;
+        }
+
+        @include breakpoint(1700px) {
+          width: 269px;
+          font-size: 20px;
+          line-height: 22px;
+          padding: 33px 20px;
+        }
+      }
+    }
+  }
+
+  &__seen-on {
+    @include breakpoint(tablet) {
+      padding-top: 28px;
+      border-top: 4px solid rgba(155, 155, 155, 0.22);
+    }
+
+    @include breakpoint(1440px) {
+      border-top-width: 6px;
+      padding-top: 38px;
+    }
+
+    @include breakpoint(1700px) {
+      border-top-width: 8px;
+      padding-top: 46px;
+    }
+
+    &--inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @include breakpoint-down(767px) {
+        justify-content: center;
+        margin: 0 -7px;
+      }
+
+      a {
+        display: block;
+
+        @include breakpoint-down(767px) {
+          margin: 0 7px 15px;
+        }
+
+        @include breakpoint(tablet) {
+          margin-bottom: 15px;
+        }
+
+        + a {
+          @include breakpoint(tablet) {
+            margin-left: 24px;
+          }
+
+          @include breakpoint(1440px) {
+            margin-left: 32px;
+          }
+
+          @include breakpoint(1700px) {
+            margin-left: 45px;
+          }
+        }
+
+        &:nth-child(1) {
+          img {
+            max-width: 68px;
+
+            @include breakpoint(tablet) {
+              max-width: 45px;
+            }
+
+            @include breakpoint(1440px) {
+              max-width: 61px;
+            }
+
+            @include breakpoint(1700px) {
+              max-width: 84px;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            max-width: 156px;
+
+            @include breakpoint(tablet) {
+              max-width: 101px;
+            }
+
+            @include breakpoint(1440px) {
+              max-width: 136px;
+            }
+
+            @include breakpoint(1700px) {
+              max-width: 188px;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            max-width: 61px;
+
+            @include breakpoint(tablet) {
+              max-width: 41px;
+            }
+
+            @include breakpoint(1440px) {
+              max-width: 56px;
+            }
+
+            @include breakpoint(1700px) {
+              max-width: 77px;
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            max-width: 45px;
+
+            @include breakpoint(tablet) {
+              max-width: 29px;
+            }
+
+            @include breakpoint(1440px) {
+              max-width: 39px;
+            }
+
+            @include breakpoint(1700px) {
+              max-width: 53px;
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          img {
+            max-width: 56px;
+
+            @include breakpoint(tablet) {
+              max-width: 41px;
+            }
+
+            @include breakpoint(1440px) {
+              max-width: 56px;
+            }
+
+            @include breakpoint(1700px) {
+              max-width: 78px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    z-index: 2;
+
+    @include breakpoint(tablet) {
+      top: 35px;
+      right: 27px;
+    }
+
+    @include breakpoint(1440px) {
+      top: 37px;
+      right: 36px;
+    }
+
+    @include breakpoint(1700px) {
+      top: 50px;
+      right: 50px;
+    }
+
+    svg {
+      max-width: 16px;
+
+      @include breakpoint(tablet) {
+        max-width: 20px;
+      }
+
+      @include breakpoint(1440px) {
+        max-width: 27px;
+      }
+
+      @include breakpoint(1700px) {
+        max-width: 37px;
+      }
+    }
+  }
+
+  blockquote {
+    font-size: 14px;
+    line-height: 24px;
+    font-style: italic;
+    max-width: 195px;
+    font-weight: 400;
+    margin-left: auto;
+
+    @include breakpoint(tablet) {
+      font-size: 16px;
+      line-height: 32px;
+      max-width: 215px;
+    }
+
+    @include breakpoint(1700px) {
+      font-size: 20px;
+      line-height: 38px;
+      max-width: 300px;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+}

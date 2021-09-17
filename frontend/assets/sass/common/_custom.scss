@@ -1,0 +1,71 @@
+.hamburger-open {
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+
+  header {
+    z-index: 80;
+  }
+}
+
+.shown-filter {
+  .filter {
+    transform: translateX(0);
+  }
+}
+
+.shown-cookie-preferences {
+  .cookie-preferences {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+}
+
+.overlay {
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+
+  header {
+    z-index: 80;
+  }
+
+  .header {
+    z-index: 91;
+  }
+}
+
+.grecaptcha-badge { 
+  visibility: hidden;
+}
+
+.share-button {
+  min-width: 0;
+}
+
+.credit-card-shown {
+  .credit-card {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+}

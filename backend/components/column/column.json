@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_column_columns",
+  "info": {
+    "name": "Column",
+    "icon": "columns",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "menu_items": {
+      "collection": "sub-menu"
+    }
+  }
+}

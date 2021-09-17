@@ -1,0 +1,63 @@
+.about-page {
+	.page-banner__inner {
+		max-width: 700px;
+	}
+
+	.overview {
+		padding: 64px 0 30px;
+
+		@include breakpoint(tablet) {
+			padding: 80px 0 40px;
+		}
+
+		@include breakpoint(1440px) {
+			padding: 100px 0 50px;
+		}
+
+		@include breakpoint(1700px) {
+			padding: 120px 0 60px;
+		}
+
+		&__detail {
+			height: 265px;
+
+			@include breakpoint(tablet) {
+				height: 215px;
+			}
+
+			@include breakpoint(1440px) {
+				height: 193px;
+			}
+
+			@include breakpoint(1700px) {
+				height: 265px;
+			}
+
+			.readmore-p {
+				@include breakpoint(tablet) {
+					height: 71px;
+				}
+			}
+		}
+	}
+
+	.culture {
+		@include breakpoint(tablet) {
+			padding-top: 0;
+		}
+
+		@include breakpoint(1700px) {
+			padding-top: 60px;
+		}
+
+		.section__heading {
+			@include breakpoint(tablet) {
+				display: none;
+			}
+
+			@include breakpoint(1700px) {
+				display: block;
+			}
+		}
+	}
+}

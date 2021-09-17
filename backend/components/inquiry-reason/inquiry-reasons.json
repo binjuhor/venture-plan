@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_inquiry_reason_inquiry_reasons",
+  "info": {
+    "name": "Inquiry Reasons",
+    "icon": "tag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Reason": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

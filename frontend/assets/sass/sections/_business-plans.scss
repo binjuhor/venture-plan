@@ -1,0 +1,87 @@
+.business-plans {
+	@extend %section-padding;
+
+	.section__heading {
+		margin: 0 0 30px;
+
+		@include breakpoint(tablet) {
+			margin: 0 0 20px;
+		}
+
+		h3 {
+			margin: 0;
+			color: #0B3A02;
+
+			@include breakpoint(tablet) {
+				text-align: left;
+			}
+		}
+	}
+
+	.btn {
+		text-transform: uppercase;
+	}
+
+	.content-more {
+		&__inner {
+			height: 300px;
+			text-align: left;
+
+			@include breakpoint(tablet) {
+				height: 330px;
+			}
+		}
+
+		.btn-read-more {
+			font-weight: 600;
+			font-size: 15px;
+
+			@include breakpoint(tablet) {
+				font-size: 26px;
+			}
+		}
+
+		&.active {
+			.content-more__inner {
+				height: auto;
+			}
+		}
+	}
+
+	&__inner {
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 24px;
+		text-align: center;
+		margin-bottom: 41px;
+
+		@include breakpoint(tablet) {
+			font-size: 20px;
+			line-height: 36px;
+		}
+	}
+
+	&__left {
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+
+	&__right {
+		@include breakpoint(tablet) {
+			width: 50%;
+			padding-left: 120px;
+		}
+
+		.btn {
+			margin-top: 32px;
+			width: 100%;
+		}
+	}
+}

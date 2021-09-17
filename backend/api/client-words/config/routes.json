@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/client-words",
+      "handler": "client-words.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/client-words/count",
+      "handler": "client-words.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/client-words/:id",
+      "handler": "client-words.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/client-words",
+      "handler": "client-words.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/client-words/:id",
+      "handler": "client-words.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/client-words/:id",
+      "handler": "client-words.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

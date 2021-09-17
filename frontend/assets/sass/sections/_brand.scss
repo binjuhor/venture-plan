@@ -1,0 +1,41 @@
+.brand {
+	padding: 60px 0 30px;
+
+	@include breakpoint(tablet) {
+		padding: 20px 0 29px;
+	}
+
+	@include breakpoint(1440px) {
+		padding: 100px 0 40px;
+	}
+
+	@include breakpoint(1700px) {
+		padding: 67px 0 60px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;
+		align-items: center;
+
+		@include breakpoint-down(1023px) {
+			flex-wrap: wrap;
+		}
+
+		figure {
+			padding: 0 15px;
+			text-align: center;
+			width:70%;
+
+			@include breakpoint-down(1023px) {
+				width: 33.33%;
+				margin-bottom: 30px;
+			}
+
+			@include breakpoint-down(767px) {
+				width: 50%;
+			}
+		}
+	}
+}

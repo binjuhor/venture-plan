@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_passion_results_passion_results",
+  "info": {
+    "name": "Passion Results",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

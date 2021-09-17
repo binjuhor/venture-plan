@@ -1,0 +1,177 @@
+.video {
+	padding: 30px 0;
+
+	@include breakpoint(tablet) {
+		padding: 40px 0;
+	}
+
+	@include breakpoint(1440px) {
+		padding: 50px 0;
+	}
+
+	@include breakpoint(1700px) {
+		padding: 60px 0;
+	}
+
+	&__inner {
+		@include breakpoint(tablet) {
+			display: flex;
+		}
+	}
+
+	&__search {
+		margin-bottom: 40px;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+			padding: 0 60px 0 0;
+			margin-bottom: 0;
+		}
+
+		@include breakpoint(1440px) {
+			padding: 0 177px 0 0;
+		}
+
+		@include breakpoint(1700px) {
+			padding: 0 205px 0 0;
+		}
+
+		.btn {
+			display: none;
+			width: 100%;
+
+			@include breakpoint(tablet) {
+				display: block;
+				margin-top: 79px;
+			}
+
+			@include breakpoint(tablet) {
+				margin-top: 64px;
+			}
+
+			@include breakpoint(1700px) {
+				display: none;
+			}
+		}
+	}
+	
+
+	&__content {
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 24px;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		@include breakpoint(1440px) {
+			font-size: 23px;
+			line-height: 48px;
+		}
+
+		.video-container {
+			margin-bottom: 25px;
+			border-radius: 6px 6px 0 0;
+			box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.12);
+
+			@include breakpoint(tablet) {
+				margin-bottom: 17px;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75);
+			}
+
+			@include breakpoint(1440px) {
+				margin-bottom: 40px;
+			}
+		}
+
+		p {
+			margin-bottom: 15px;
+
+			@include breakpoint(tablet) {
+				margin-bottom: 55px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.content-more {
+		.video {
+			&__search {
+				@include breakpoint(tablet) {
+					width: 42%;
+					padding: 0 35px 0 0;
+				}
+
+				@include breakpoint(1024px) {
+					padding: 0 95px 0 0;
+				}
+			}
+
+			&__content {
+				@include breakpoint(tablet) {
+					width: 58%;
+				}
+			}
+		}
+	}
+
+	&.video-hide-pc {
+		.video__content {
+			.video-container {
+				@include breakpoint(tablet) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.search-padding {
+		.video__search {
+			@include breakpoint-down(767px) {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	&__bottom {
+		text-align: center;
+		margin-top: 40px;
+
+		@include breakpoint(tablet) {
+			margin-top: 55px;
+			display: none;
+		}
+
+		@include breakpoint(1440px) {
+			margin-top: 65px;
+		}
+
+		@include breakpoint(1700px) {
+			margin-top: 74px;
+			display: block;
+		}
+	}
+}
+
+.searchInput {
+	position: relative;
+
+	>span {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		left: calc(100% - 75px);
+
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+}

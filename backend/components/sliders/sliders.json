@@ -1,0 +1,75 @@
+{
+  "collectionName": "components_sliders_sliders",
+  "info": {
+    "name": "Sliders",
+    "icon": "angle-double-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    },
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "LinkType": {
+      "type": "enumeration",
+      "enum": [
+        "Simple",
+        "Complex"
+      ],
+      "unique": false,
+      "required": true
+    },
+    "ImageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "BannerType": {
+      "type": "enumeration",
+      "enum": [
+        "Image",
+        "Video"
+      ],
+      "default": "Image",
+      "required": false
+    },
+    "VideoBanner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

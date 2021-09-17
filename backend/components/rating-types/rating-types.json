@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_rating_types_rating_types",
+  "info": {
+    "name": "Rating Types",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "google",
+        "yelp"
+      ]
+    }
+  }
+}

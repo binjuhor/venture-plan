@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_positions_positions",
+  "info": {
+    "name": "Positions",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "Position": {
+      "type": "text"
+    }
+  }
+}

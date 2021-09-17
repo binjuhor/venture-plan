@@ -1,0 +1,158 @@
+.process {
+	&__item {
+		margin-bottom: 120px;
+
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: center;
+		}
+
+		&--content {
+			position: relative;
+			padding-left: 52px;
+			font-size: 13px;
+			line-height: 24px;
+			font-weight: 500;
+			margin-bottom: 67px;
+
+			@include breakpoint(tablet) {
+				width: 50%;
+				padding-left: 75px;
+				padding-right: 30px;
+				font-size: 18px;
+				line-height: 32px;
+				margin-bottom: 0;
+			}
+
+			@include breakpoint(1440px) {
+				padding-left: 96px;
+				padding-right: 120px;
+				font-size: 24px;
+				line-height: 38px;
+			}
+
+			> span {
+				width: 40px;
+				height: 40px;
+				font-size: 20px;
+				line-height: 28px;
+				background: $primary;
+				border-radius: 50%;
+				color: $white;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+				position: absolute;
+				left: 0;
+				top: -7px;
+
+				@include breakpoint(tablet) {
+					width: 55px;
+					height: 55px;
+					font-size: 24px;
+				}
+
+				@include breakpoint(1440px) {
+					width: 66px;
+					height: 66px;
+					font-size: 28px;
+					top: -20px;
+				}
+			}
+
+			.content-more {
+				&__inner {
+					height: auto;
+					margin-bottom: 20px;
+					text-align: left;
+
+					@include breakpoint(tablet) {
+						height: 120px;
+					}
+				}
+
+				&.active {
+					.content-more__inner {
+						height: auto;
+					}
+				}
+
+				.btn-read-more {
+					@include breakpoint-down(767px) {
+						display: none;
+					}
+
+					@include breakpoint(tablet) {
+						font-size: 18px;
+					}
+
+					@include breakpoint(1440px) {
+						font-size: 24px;
+					}
+				}
+			}
+
+			h3 {
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 28px;
+				margin: 0 0 18px;
+
+				@include breakpoint(tablet) {
+					font-size: 24px;
+					margin: 0 0 25px;
+				}
+
+				@include breakpoint(1440px) {
+					font-size: 28px;
+					margin: 0 0 40px;
+				}
+			}
+		}
+
+		&--text {
+			text-align: center;
+		}
+
+		figure {
+			@include breakpoint(tablet) {
+				width: 50%;
+			}
+		}
+
+		&:nth-child(even) {
+			.process__item--content {
+				@include breakpoint(tablet) {
+					padding-right: 0;
+					padding-left: 105px;
+					padding-right: 30px;
+				}
+
+				@include breakpoint(1440px) {
+
+				}
+
+				> span {
+					@include breakpoint(tablet) {
+						left: 30px;
+					}
+
+					@include breakpoint(1440px) {
+
+					}
+				}
+			}
+
+			figure {
+				@include breakpoint(tablet) {
+					order: -1;
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

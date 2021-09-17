@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_statistic_content_statistic_contents",
+  "info": {
+    "name": "Statistic Content",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

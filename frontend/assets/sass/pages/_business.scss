@@ -1,0 +1,103 @@
+.business-page {
+	.scroll-menu__nav li + li {
+		margin-left: 12px;
+
+		@include breakpoint(tablet) {
+			margin-left: 16px;
+		}
+	}
+
+	.certificate-trust {
+		padding: 60px 0 30px;
+		background: $white;
+
+		@include breakpoint(tablet) {
+			padding: 80px 0 40px;
+		}
+
+		@include breakpoint(1440px) {
+			padding: 100px 0 50px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 125px 0 60px;
+		}
+	}
+
+	.consultation {
+		&.bg-bottom {
+			@extend %section-padding;
+		}
+
+		&__heading {
+			margin: 0 0 40px;
+
+			@include breakpoint(tablet) {
+				margin: 0 0 120px;
+			}
+
+			h3 {
+				margin: 0 0 17px;
+
+				@include breakpoint(tablet) {
+					margin: 0 0 24px;
+					line-height: 41px;
+				}
+			}
+
+			h4 {
+				margin: 0 0 33px;
+
+				@include breakpoint(tablet) {
+					margin: 0 0 65px;
+				}
+			}
+		}
+	}
+
+	.core-value {
+		padding-top: 60px;
+
+		@include breakpoint(tablet) {
+			padding-top: 80px;
+		}
+
+		@include breakpoint(1440px) {
+			padding-top: 100px;
+		}
+
+		@include breakpoint(tablet) {
+			padding-top: 120px;
+		}
+	}
+
+	.video__content {
+		font-weight: 400;
+
+		@include breakpoint(1440px) {
+			line-height: 36px;
+		}
+
+		p {
+			@include breakpoint(tablet) {
+				margin-bottom: 50px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.search-group {
+		&__list {
+			@include breakpoint(1700px) {
+				max-height: 774px;
+			}
+		}
+	}
+
+	.ratings {
+		@extend %section-padding;
+	}
+}

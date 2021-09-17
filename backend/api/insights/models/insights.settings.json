@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insights",
+  "info": {
+    "name": "Insights",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "insight_categories": {
+      "collection": "insight-categories"
+    }
+  }
+}

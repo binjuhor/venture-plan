@@ -1,0 +1,255 @@
+.overview {
+  @include breakpoint(tablet) {
+    padding: 40px 0;
+  }
+
+  @include breakpoint(1440px) {
+    padding: 50px 0;
+  }
+
+  @include breakpoint(1700px) {
+    padding: 32px 0 60px;
+  }
+
+  .section__title {
+    h3 {
+      margin: 0 0 22px;
+
+      @include breakpoint(1440px) {
+        margin: 0 0 31px;
+      }
+
+      @include breakpoint(1700px) {
+        margin: 0 0 32px;
+      }
+    }
+  }
+
+  &__detail {
+    height: 320px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 57px;
+      height: 245px;
+    }
+
+    @include breakpoint(1440px) {
+      height: 307px;
+    }
+
+    @include breakpoint(1700px) {
+      height: 367px;
+    }
+
+    .readmore-p {
+      position: absolute;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 600;
+      background: var(--white);
+
+      @include breakpoint-down(tablet) {
+        padding-bottom: 0;
+        height: 117px;
+        background: #fbfbfd;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 24px;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 52px;
+        position: absolute;
+        left: 0;
+        top: -50px;
+        backdrop-filter: blur(5px);
+        --webkit-backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.15);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+
+        @include breakpoint-down(767px) {
+          display: none;
+        }
+      }
+
+      .readmore {
+        span {
+          &:last-of-type {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .readmore-p::before {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    @-moz-document url-prefix() {
+      .readmore-p::before {
+        background: var(--white);
+        webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        opacity: 0.89;
+      }
+    }
+
+    &.active {
+      height: auto;
+
+      .readmore-p {
+        &::before {
+          display: none;
+        }
+      }
+
+      .readmore {
+        span {
+          &:first-of-type {
+            display: none;
+          }
+
+          &:last-of-type {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    p {
+      // font-size: 14px;
+      // line-height: 24px;
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 30px;
+      letter-spacing: -1px;
+      font-weight: 500;
+
+      // @include breakpoint(1440px) {
+      //   font-size: 20px;
+      //   line-height: 36px;
+      // }
+
+      @include breakpoint(1440px) {
+        font-size: 23px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  &.left-heading {
+    .overview {
+      &__inner {
+        @include breakpoint(tablet) {
+          display: flex;
+        }
+
+        .section__title {
+          @include breakpoint(tablet) {
+            width: 286px;
+            padding-right: 80px;
+          }
+
+          @include breakpoint(1440px) {
+            width: 360px;
+            padding-right: 60px;
+          }
+
+          @include breakpoint(1700px) {
+            width: 440px;
+            padding-right: 30px;
+          }
+
+          h3 {
+            @include breakpoint(tablet) {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      &__detail {
+        @include breakpoint-down(767px) {
+          padding-bottom: 0;
+        }
+
+        @include breakpoint(tablet) {
+          width: calc(100% - 286px);
+        }
+
+        @include breakpoint(1700px) {
+          width: calc(100% - 360px);
+        }
+
+        @include breakpoint(1700px) {
+          width: calc(100% - 440px);
+        }
+
+        p {
+          @include breakpoint-down(767px) {
+            font-size: 13px;
+            line-height: 24px;
+          }
+        }
+
+        .readmore-p {
+          height: 64px;
+
+          @include breakpoint-down(767px) {
+            height: auto;
+            background: none;
+          }
+
+          &::before {
+            top: -20px;
+
+            @include breakpoint-down(767px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+    text-align: center;
+
+    @include breakpoint(1440px) {
+      margin-top: 0;
+    }
+
+    @include breakpoint(1700px) {
+      margin-top: 80px;
+    }
+  }
+}

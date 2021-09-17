@@ -1,0 +1,147 @@
+.best-place {
+  @extend %section-padding-bottom;
+
+  .section__heading {
+    margin: 0 0 18px;
+
+    @include breakpoint(tablet) {
+      margin: 0 0 24px;
+    }
+
+    @include breakpoint(1440px) {
+      margin: 0 0 34px;
+    }
+
+    @include breakpoint(1700px) {
+      margin: 0 0 41px;
+    }
+
+    h3 {
+      text-align: left;
+
+      @include breakpoint(tablet) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 32px 16px 115px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+    position: relative;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      padding: 80px 30px;
+    }
+
+    @include breakpoint(1440px) {
+      padding: 102px 43px;
+    }
+
+    @include breakpoint(1700px) {
+      padding: 180px 40px 121px 60px;
+    }
+  }
+
+  &__left {
+    margin-bottom: 33px;
+
+    @include breakpoint(tablet) {
+      width: 50%;
+      margin-bottom: 0;
+      padding-bottom: 100px;
+      position: relative;
+    }
+
+    @include breakpoint(1440px) {
+      padding-bottom: 140px;
+    }
+
+    @include breakpoint(1700px) {
+      margin-bottom: 0;
+      padding-bottom: 165px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 500;
+
+      @include breakpoint(tablet) {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 20px;
+        line-height: 35px;
+      }
+
+      @include breakpoint(1700px) {
+        font-size: 23px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+    }
+
+    .btn {
+      bottom: 32px;
+      position: absolute;
+      z-index: 1;
+
+      @include breakpoint-down(767px) {
+        width: calc(100% - 32px);
+        min-width: 0;
+      }
+
+      @include breakpoint(tablet) {
+        bottom: 0;
+      }
+
+      @include breakpoint(tablet) {
+        bottom: 30px;
+      }
+
+      @include breakpoint(1700px) {
+        bottom: 45px;
+      }
+    }
+  }
+
+  &__right {
+    @include breakpoint(tablet) {
+      width: 50%;
+      padding-left: 40px;
+    }
+
+    @include breakpoint(1440px) {
+      padding-left: 70px;
+    }
+
+    @include breakpoint(1700px) {
+      padding-left: 0;
+    }
+
+    figure {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      &::before {
+        @include breakpoint(tablet) {
+          content: "";
+          background: linear-gradient(80deg, var(--white) 50%, transparent 50%);
+          height: 100%;
+          width: 100px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

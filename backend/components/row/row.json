@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_row_rows",
+  "info": {
+    "name": "Row",
+    "icon": "arrows-alt-v",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "column.column"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

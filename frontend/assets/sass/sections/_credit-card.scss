@@ -1,0 +1,411 @@
+body {
+  &.credit-card-shown {
+    .credit-card {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: visible;
+    }
+  }
+}
+
+.call-credit-card {
+  &__inner {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.credit-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1200;
+  background: #fafafb;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+
+  &__inner {
+    @include breakpoint(tablet) {
+      display: flex;
+      min-height: 100%;
+    }
+  }
+
+  &__pricing {
+    background: url("../images/credit-card-img.jpg") no-repeat 50% 50% / cover;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    @include breakpoint(tablet) {
+      width: 43%;
+      padding: 65px;
+    }
+
+    @include breakpoint(1440px) {
+      width: 46.6%;
+      padding: 85px;
+    }
+  }
+
+  &__box {
+    width: 100%;
+
+    border: 3px solid var(--white);
+    border-radius: 31px;
+    color: $white;
+    padding: 25px;
+
+    @include breakpoint(tablet) {
+      padding: 22px 35px 27px;
+      max-width: 309px;
+    }
+
+    @include breakpoint(1440px) {
+      padding: 30px 43px 35px;
+      max-width: 398px;
+    }
+
+    + .credit-card__box {
+      margin-top: 35px;
+
+      @include breakpoint(tablet) {
+        margin-top: 59px;
+      }
+
+      @include breakpoint(1440px) {
+        margin-top: 76px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 27px;
+      margin: 0 0 25px;
+      font-weight: 500;
+
+      @include breakpoint(tablet) {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 23px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 24px;
+        line-height: 27px;
+        margin: 0 0 25px;
+      }
+    }
+
+    &--info {
+      position: relative;
+      padding-left: 75px;
+      font-weight: 500;
+
+      @include breakpoint(tablet) {
+        padding-left: 58px;
+      }
+
+      @include breakpoint(1440px) {
+        padding-left: 75px;
+      }
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 52px;
+
+        @include breakpoint(tablet) {
+          max-width: 40px;
+        }
+
+        @include breakpoint(1440px) {
+          max-width: 52px;
+        }
+      }
+
+      > p {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 10px;
+
+        @include breakpoint(tablet) {
+          font-size: 10px;
+          line-height: 14px;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &--price {
+      text-align: right;
+
+      p {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1;
+
+        @include breakpoint(tablet) {
+          font-size: 25px;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 34px;
+        }
+      }
+
+      sup {
+        font-size: 11px;
+        line-height: 12px;
+        top: -14px;
+        margin-right: 5px;
+
+        @include breakpoint(tablet) {
+          font-size: 8px;
+          line-height: 9px;
+          top: -13px;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 11px;
+          line-height: 12px;
+          top: -14px;
+        }
+      }
+
+      span {
+        font-size: 9px;
+        line-height: 10px;
+
+        @include breakpoint(tablet) {
+          font-size: 6px;
+          line-height: 7px;
+        }
+
+        @include breakpoint(1440px) {
+          font-size: 9px;
+          line-height: 10px;
+        }
+      }
+    }
+  }
+
+  &__checkout {
+    padding: 45px 30px;
+
+    @include breakpoint(tablet) {
+      width: 57%;
+      display: flex;
+      align-items: flex-end;
+      padding: 40px 129px 60px 60px;
+    }
+
+    @include breakpoint(1440px) {
+      width: 53.4%;
+      padding: 80px 121px 84px 85px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 20px;
+      margin: 0 0 10px;
+      display: block;
+
+      @include breakpoint(tablet) {
+        padding-left: 13px;
+        font-size: 10px;
+        line-height: 11px;
+        margin: 0 0 7px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 14px;
+        line-height: 16px;
+        padding-left: 20px;
+        margin: 0 0 10px;
+      }
+    }
+
+    input {
+      background: #f4f4f4;
+      border: 0;
+      border-radius: 0;
+      width: 100%;
+      margin: 0;
+      border-color: #f4f4f4;
+
+      @include breakpoint(tablet) {
+        font-size: 12px;
+        padding: 11px 20px;
+      }
+
+      @include breakpoint(1440px) {
+        font-size: 16px;
+        padding: 15px 24px;
+      }
+    }
+
+    &--list {
+      @extend %reset-list;
+
+      li {
+        display: inline-block;
+
+        + li {
+          margin-left: 20px;
+
+          @include breakpoint(tablet) {
+            margin-left: 20px;
+          }
+
+          @include breakpoint(1440px) {
+            margin-left: 28px;
+          }
+        }
+      }
+    }
+
+    .form-row {
+      margin: 0 0 18px;
+
+      @include breakpoint(tablet) {
+        margin: 0 0 12px;
+      }
+
+      @include breakpoint(1440px) {
+        margin: 0 0 18px;
+      }
+    }
+
+    .form-credit-card {
+      margin: 0 -9px 25px;
+      display: flex;
+
+      @include breakpoint-down(767px) {
+        flex-wrap: wrap;
+      }
+
+      @include breakpoint(tablet) {
+        margin: 0 -6px 13px;
+      }
+
+      @include breakpoint(1440px) {
+        margin: 0 -9px 25px;
+      }
+
+      label {
+        text-align: center;
+        padding: 0;
+      }
+
+      > div {
+        padding: 0 9px;
+
+        @include breakpoint-down(767px) {
+          width: 50%;
+        }
+
+        @include breakpoint(tablet) {
+          padding: 0 6px;
+        }
+
+        @include breakpoint(1440px) {
+          padding: 0 9px;
+        }
+      }
+
+      &__postal-code {
+        margin-left: 55px;
+
+        @include breakpoint-down(767px) {
+          margin: 18px 0 0;
+          width: 100% !important;
+        }
+
+        @include breakpoint(tablet) {
+          margin-left: 41px;
+        }
+
+        @include breakpoint(1440px) {
+          margin-left: 55px;
+        }
+      }
+
+      &__cvc {
+        position: relative;
+
+        label {
+          padding: 0 25px;
+          position: relative;
+        }
+
+        .tooltip {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
+    &--button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 47px 0 0;
+
+      @include breakpoint(tablet) {
+        margin: 33px 0 0;
+      }
+
+      @include breakpoint(1440px) {
+        margin: 47px 0 0;
+      }
+
+      a {
+        svg {
+          max-width: 130px;
+
+          @include breakpoint(tablet) {
+            max-width: 112px;
+          }
+
+          @include breakpoint(1440px) {
+            max-width: none;
+          }
+        }
+      }
+
+      button {
+        min-width: 150px;
+        border: 1px solid #c5c5c5;
+        color: $black;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 15px;
+
+        @include breakpoint(tablet) {
+          min-width: 153px;
+        }
+
+        @include breakpoint(1440px) {
+          min-width: 219px;
+        }
+      }
+    }
+  }
+}

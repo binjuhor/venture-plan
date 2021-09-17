@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/consultation-entries",
+      "handler": "consultation-entries.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consultation-entries/count",
+      "handler": "consultation-entries.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consultation-entries/:id",
+      "handler": "consultation-entries.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/consultation-entries",
+      "handler": "consultation-entries.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/consultation-entries/:id",
+      "handler": "consultation-entries.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/consultation-entries/:id",
+      "handler": "consultation-entries.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
